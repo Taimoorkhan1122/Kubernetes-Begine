@@ -62,8 +62,11 @@ Set Defualt drivers :
 If your cluster is running, the output from minikube status should be similar to:
 
 **host: Running
+
 kubelet: Running
+
 apiserver: Running
+
 kubeconfig: Configured**
 
 # DONE!
