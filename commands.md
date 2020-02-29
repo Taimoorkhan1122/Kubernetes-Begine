@@ -20,7 +20,7 @@
 ## Port Forwarding
 
 	 kubectl port-forward <podname> <external_port>:<container_port>
-if you get this error **Unable to do port forwarding: socat not found.** Kubernetes on Docker###
+if you get this error **Unable to do port forwarding: socat not found. Kubernetes on Docker** 
 then hit this command on terminal 
 
 	 sudo apt-get -y install socat
