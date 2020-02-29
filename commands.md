@@ -20,7 +20,7 @@
 ## Port Forwarding
 
 	 kubectl port-forward <podname> <external_port>:<container_port>
-if you get this error ###Unable to do port forwarding: socat not found. Kubernetes on Docker###
+if you get this error **Unable to do port forwarding: socat not found.** Kubernetes on Docker###
 then hit this command on terminal 
 
 	 sudo apt-get -y install socat
@@ -51,7 +51,7 @@ if multiple labels are present
 
 Pod with no given labels
 
-kubectl get pod -l key1!=value1 --show-label	
+	 kubectl get pod -l key1!=value1 --show-label	
 
 Contains a pod wtih given type irrespective of value
 	 
