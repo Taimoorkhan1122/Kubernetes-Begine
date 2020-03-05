@@ -19,8 +19,13 @@
 
 ## Port Forwarding
 
+<<<<<<< HEAD
 kubectl port-forward <podname> <external_port>:<container_port>
 if you get this error ***Unable to do port forwarding: socat not found. Kubernetes on Docker***
+=======
+	 kubectl port-forward <podname> <external_port>:<container_port>
+if you get this error **Unable to do port forwarding: socat not found. Kubernetes on Docker** 
+>>>>>>> 2489c6828f1773751aadca2eca0fc98d4dd73db8
 then hit this command on terminal 
 
   	 sudo apt-get -y install socat
@@ -75,13 +80,12 @@ listing a pod not containing given list of values  agianst any key
 
 	 kubectl label nodes <node-name> <key>=<value>
 
-Now you when you add nodeSelector field in Spec of your pod definition file Kubernetes will assign this pod 
-to the node with given label.
+Now whenever you add nodeSelector field in Spec of your pod definition file Kubernetes and specify the nodeSelector label, Kubernetes will assign this pod to the node with given label.
 
 
 # Annotation
 
-## To annotate any 
+## To annotate any Pod
 
 	 kubectl annotate pod podname key=value
 
