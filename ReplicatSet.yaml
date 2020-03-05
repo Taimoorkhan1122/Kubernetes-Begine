@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+    name: myreplicaset
+spec:
+    replicas: 3
+    selector:
+        matchLabels:
+            app: myapp
+    template:
+        metadata:
+            labels:
+                app: myapp
+        spec:
+            containers:
+            - name: mypage
+              image: dock2taimoor/my-first-page
+              ports:
+                - containerPort: 80
