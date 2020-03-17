@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: deploy-app
+  template:
+    metadata:
+      name: deploypod
+      labels:
+        app: deploy-app
+    spec:
+      containers:
+        - name: container1
+          image: dock2taimoor/my-first-page
+          imagePullPolicy: IfNotPresent
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate

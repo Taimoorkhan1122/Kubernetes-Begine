@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-page
+  labels:
+    webapp: myapp
+spec:  # specification of the pod’s contents
+  containers:
+  - name: front-end-pod
+    image: dock2taimoor/my-first-page

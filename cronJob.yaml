@@ -1,0 +1,18 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: batch-job-every-minute
+spec:
+  schedule: "* * * * *"
+  jobTemplate: 
+    spec:
+      template:
+          metadata:
+            labels:
+              app: periodic-job
+          spec:
+            restartPolicy: Never
+            containers:
+            - name: main
+              image: debian
+              command: ["echo", "This is a cronjob"]

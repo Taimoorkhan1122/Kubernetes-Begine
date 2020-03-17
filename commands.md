@@ -19,13 +19,12 @@
 
 ## Port Forwarding
 
-<<<<<<< HEAD
-kubectl port-forward <podname> <external_port>:<container_port>
+     kubectl port-forward <podname> <external_port>:<container_port>
 if you get this error ***Unable to do port forwarding: socat not found. Kubernetes on Docker***
-=======
+
 	 kubectl port-forward <podname> <external_port>:<container_port>
 if you get this error **Unable to do port forwarding: socat not found. Kubernetes on Docker** 
->>>>>>> 2489c6828f1773751aadca2eca0fc98d4dd73db8
+
 then hit this command on terminal 
 
   	 sudo apt-get -y install socat
@@ -141,9 +140,23 @@ The convention for creating a namespace identifier is to always use lowercase le
 	
 # Pod Scaling
 	 kubectl scale rs <name-of-replicaset> --replicas=5
-# --cascade=false
+## --cascade=false
 When delete a replicaset it will also terminate underlying pods for deleting only replicaset only and not pods under it use
 
 	 kubectl delete rs <name> --cascade=false
-# Horizontal Pod Autoscaler
+## Horizontal Pod Autoscaler
 	 kubectl autoscale rs <name> --min=2 --max=5 --cpu-percent=80
+#
+##JOB
+
+empty
+
+
+##Cron Job
+Watch for the job to be created in around one minute:
+
+	kubectl get jobs --watch
+	
+Delete a crone job
+
+kubectl delete cronjob <jobname>
