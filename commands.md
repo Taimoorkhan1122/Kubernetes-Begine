@@ -146,17 +146,17 @@ When delete a replicaset it will also terminate underlying pods for deleting onl
 	 kubectl delete rs <name> --cascade=false
 ## Horizontal Pod Autoscaler
 	 kubectl autoscale rs <name> --min=2 --max=5 --cpu-percent=80
-#
-##JOB
+
+## JOB
 
 empty
 
 
-##Cron Job
+## Cron Job
 Watch for the job to be created in around one minute:
 
 	kubectl get jobs --watch
 	
 Delete a crone job
 
-kubectl delete cronjob <jobname>
+    kubectl delete cronjob <jobname>
